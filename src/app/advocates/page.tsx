@@ -33,7 +33,7 @@ export default function AdvocatesPage() {
         `/advocates${query ? `?${query}` : ""}`,
       );
 
-      setAdvocates(result.data || []);
+      setAdvocates(result.data?.advocates || []);
     } catch (err) {
       setError(
         err instanceof Error
