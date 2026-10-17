@@ -1,7 +1,7 @@
 export type ConsultationMode = "online" | "in_person" | "phone";
 
 export interface AdvocateProfile {
-  _id: string;
+  id: string;
   slug: string;
   headline?: string;
   bio?: string;
@@ -45,5 +45,7 @@ export interface AdvocateSearchResponse {
 
 export interface AdvocateProfileResponse {
   success: boolean;
-  data: AdvocateProfile;
+  data: {
+    profile: AdvocateProfile;
+  };
 }
